@@ -24,6 +24,7 @@ class HellController @Resource()(val request: HttpServletRequest, val resp: Http
 
   @RequestMapping(value = Array("hello"))
   def hello(): String = {
+    log.info("saveArticle：{}", "scala")
     "hello ,scala"
   }
 
