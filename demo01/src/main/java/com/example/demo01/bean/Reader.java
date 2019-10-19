@@ -1,16 +1,10 @@
 package com.example.demo01.bean;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Arrays;
-import java.util.Collection;
 
 @Entity
-public class Reader implements UserDetails {
+public class Reader/* implements UserDetails*/ {
     private static final long serialVersionUID = 1L;
     @Id
     private String username;
@@ -41,7 +35,7 @@ public class Reader implements UserDetails {
         this.password = password;
     }
 
-    // UserDetails methods
+   /* // UserDetails methods
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(new SimpleGrantedAuthority("READER"));//授予权限READER
@@ -65,5 +59,5 @@ public class Reader implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
+    }*/
 }

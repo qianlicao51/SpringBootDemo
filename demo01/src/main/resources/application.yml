@@ -6,3 +6,15 @@ spring:
     url: jdbc:mysql://localhost/fm
     username: root
     password: root
+
+---
+spring:
+  profiles: development
+logging:
+  level: debug
+---
+spring:
+  profiles: production
+
+logging:
+  level: error
