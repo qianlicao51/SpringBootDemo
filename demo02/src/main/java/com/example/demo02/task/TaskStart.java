@@ -7,9 +7,14 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.io.IOException;
 
-@Component
 @Slf4j
+@Component
 public class TaskStart {
+
+    public void initApp() {
+        log.info("程序启动初始化工作");
+    }
+
     //Bean容器初始化后，会调用@PostConstruct的注解方法
     @PostConstruct
     public void init() throws IOException {

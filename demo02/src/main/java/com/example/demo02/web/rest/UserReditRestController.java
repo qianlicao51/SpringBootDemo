@@ -17,7 +17,7 @@ public class UserReditRestController {
     @RequestMapping(value = "/usercredit/{uid}", produces = "text/html; charset=UTF-8")
     public Integer getCreditLevel(@PathVariable String uid) {
         log.info("usercredit id is {}", uid);
-        return 3;
+        return Integer.valueOf(uid);
     }
 
 }
