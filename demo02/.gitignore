@@ -30,3 +30,9 @@ build/
 ### VS Code ###
 .vscode/
 !/.mvn/
+!/.mvn/
+/src/main/resources/banner.jpg
+
+
+*.log
+*.log*.gz
