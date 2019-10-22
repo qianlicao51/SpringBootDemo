@@ -1,0 +1,14 @@
+2019-10-22 22:50:11.896  INFO 16748 --- [main] c.example.demo02.Demo02ApplicationTests  : Starting Demo02ApplicationTests on DESKTOP-96TCRDC with PID 16748 (started by MI in D:\soft\workspace\idea\SpringBootDemo\demo02)
+2019-10-22 22:50:11.898  INFO 16748 --- [main] c.example.demo02.Demo02ApplicationTests  : No active profile set, falling back to default profiles: default
+2019-10-22 22:50:13.217  INFO 16748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-22 22:50:13.483  INFO 16748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-22 22:50:14.877  INFO 16748 --- [main] com.example.demo02.task.TaskStart        : 程序启动 初始化工作开始
+2019-10-22 22:50:15.124  WARN 16748 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-22 22:50:15.705  INFO 16748 --- [scheduling-1] com.example.demo02.task.ScheduleTask     : Tue Oct 22 22:50:15 CST 2019
+2019-10-22 22:50:15.707  INFO 16748 --- [main] c.example.demo02.Demo02ApplicationTests  : Started Demo02ApplicationTests in 5.453 seconds (JVM running for 6.736)
+2019-10-22 22:50:15.709  INFO 16748 --- [main] com.example.demo02.config.MyBean         : CommandLineRunner 程序运行
+2019-10-22 22:50:16.042  INFO 16748 --- [main] c.example.demo02.Demo02ApplicationTests  : dataSource:HikariDataSource (HikariPool-1)
+2019-10-22 22:50:16.042  INFO 16748 --- [main] c.example.demo02.Demo02ApplicationTests  : dataSource Name:com.zaxxer.hikari.HikariDataSource
+2019-10-22 22:50:16.331  INFO 16748 --- [SpringContextShutdownHook] com.example.demo02.task.TaskStart        : 程序销毁之前调用
+2019-10-22 22:50:16.333  INFO 16748 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-22 22:50:16.342  INFO 16748 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

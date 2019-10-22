@@ -1,12 +1,21 @@
 package com.example.demo02.bean;
 
-import java.io.Serializable;
+import javax.persistence.*;
 
-public class Dic  implements Serializable {
+@Entity(name = "ym_dic")
+public class Dic {
 
-    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String diccode, dicname, dicitemcode, dicitemname;
+    @Column
+    private String diccode;
+    @Column
+    private String dicname;
+    @Column
+    private String dicitemcode;
+    @Column
+    private String dicitemname;
 
     @Override
     public String toString() {

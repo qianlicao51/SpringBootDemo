@@ -16,7 +16,6 @@ public class DatasourceConfig {
 
     @Bean(name = "dataSource")
     public DataSource dataSource() {
-
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setJdbcUrl(environment.getProperty("spring.datasource.url"));
         dataSource.setPassword(environment.getProperty("spring.datasource.password"));
