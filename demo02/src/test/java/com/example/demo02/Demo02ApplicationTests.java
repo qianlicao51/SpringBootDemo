@@ -6,17 +6,19 @@ import com.example.demo02.bean.Dic;
 import com.example.demo02.service.DicService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.sql.DataSource;
 import java.util.List;
 
-//@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class)
 @Slf4j
 @SpringBootTest
 class Demo02ApplicationTests {
@@ -25,7 +27,8 @@ class Demo02ApplicationTests {
     DataSourceProperties dataSourceProperties;
     @Autowired
     ApplicationContext applicationContext;
-
+    @Autowired
+    JdbcTemplate jdbcTemplate;
 
     @Test
     void contextLoads() {
@@ -62,5 +65,14 @@ class Demo02ApplicationTests {
         dic.setDicitemname("测试A");
 
         dicS.addDic(dic);
+
+
+//
+    }
+
+    @Test
+    public void jdbcQuery() {
+        List<Dic> dics = jdbcTemplate.query(" SELECT * FROM ym_dic where id =?", new String[]{"1"}, new BeanPropertyRowMapper(Dic.class));
+        log.info("", dics);
     }
 }
