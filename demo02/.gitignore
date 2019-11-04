@@ -36,3 +36,7 @@ build/
 
 *.log
 *.log*.gz
+!/.mvn/
+!/.mvn/wrapper/maven-wrapper.properties
+!/.mvn/wrapper/maven-wrapper.jar
+!/.mvn/wrapper/MavenWrapperDownloader.java
