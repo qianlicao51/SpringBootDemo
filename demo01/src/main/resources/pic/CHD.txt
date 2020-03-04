@@ -1,4 +1,3 @@
-root密码Grq756451.
 
 192.168.226.116 chd01
 192.168.226.114 chd02
@@ -11,38 +10,3 @@ systemctl stop mariadb  #停止MariaDB
 systemctl restart mariadb  #重启MariaDB
 
 systemctl enable mariadb  #设置开机启动
-systemctl start mysqld
-grep "password" /var/log/mysqld.log   
-
- 
---------------安装MySQL https://www.cnblogs.com/starof/p/4680083.html
-wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
-rpm -ivh mysql-community-release-el7-5.noarch.rpm
-yum install mysql-community-server
-systemctl start mysqld
-grep "password" /var/log/mysqld.log 
-/usr/bin/mysqladmin -u root password 'root';
-
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION;
-./scm_prepare_database.sh mysql  -hchd02 -utemp -ptemp --scm-host % scm scm scm_pass
-
-
-
-
-###网络配置静态 /etc/sysconfig/network-scripts
-
-#修改
-BOOTPROTO=static #这里讲dhcp换成ststic
-ONBOOT=yes #将no换成yes
-#新增
-IPADDR=192.168.85.100 #静态IP
-GATEWAY=192.168.85.2 #默认网关
-NETMASK=255.255.255.0 #子网掩码
-保存退出后,重启网络服务:
-
-# service network restart
-https://www.mzitu.com/198404/63
-
-https://www.cnblogs.com/zhangleisanshi/p/7575579.html
-
-08 视频
