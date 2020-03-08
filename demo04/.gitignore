@@ -17,7 +17,6 @@ target/
 *.iws
 *.iml
 *.ipr
-.mvn/
 
 ### NetBeans ###
 /nbproject/private/
@@ -29,4 +28,12 @@ build/
 
 ### VS Code ###
 .vscode/
+### Example user template template
+### Example user template
 
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.mvn

@@ -1,13 +1,14 @@
 package com.example.demo03.controller;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-@Slf4j
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 @Controller
 public class HelloController {
-
+    @RequestMapping("/jhel")
+    @ResponseBody
     public String hello(){
-        log.info("");
-        return "";
+        return "hello";
     }
 }
